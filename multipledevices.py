@@ -6,7 +6,7 @@ HOST = "localhost"
 user = input("Enter username: ")
 password = getpass.getpass()
 
-# Create a file named devices and add switches mangement ip addresses of switches
+# Create a file named devices on same directory and add switches mangement ip addresses of switches
 f = open ('devices')
 
 for IP in f:
