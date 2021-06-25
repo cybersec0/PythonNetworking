@@ -6,11 +6,12 @@ HOST = "localhost"
 user = input("Enter username: ")
 password = getpass.getpass()
 
-f = open ('switches')
+# Create a file named devices and add switches mangement ip addresses of switches
+f = open ('devices')
 
 for IP in f:
       IP = IP.strip()
-    print ("Configuring Switch " + (IP))
+    print (" Configuring..." + (IP))
     HOST = IP
     tn = telnetlib.Telnet(HOST)
     tn.read_until(b"Username: ")
